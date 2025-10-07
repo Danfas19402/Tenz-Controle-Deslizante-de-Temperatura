@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tenz - Controle Deslizante de Temperatura</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Primeiro passo (caixa Logo)-->
+  <main id="app">
+    <img src="img/Tenz.png" alt="Tenz">
+    <br>
+
+    <!-- Segundo passo (Título)-->
+    <h1>Tenz - Controle Deslizante de Temperatura</h1>
+
+    <!-- Terceiro passo (Bolha pulsante)-->
+    <div class="indicator-container">
+      <div id="light-indicator"></div>
+    </div>
+
+    <!-- Quarto passo (Termômetro)-->
+    <div class="slider-container">
+      <input type="range" id="kelvin" min="2700" max="6500" step="100" value="4900">
+      <div class="labels">
+        <span>2700K</span>
+        <span id="current">4900K</span>
+        <span>6500K</span>
+      </div>
+    </div>
+
+    <!--Quarto passo (Parágrafos)-->
+    <aside>
+      <p>Baseado em um <a href="https://x.com/kuxshl/status/1971113822313419254">design visto no Twitter</a>, 
+        mas com animação e som aprimorados.</p>
+      <p>Controle deslizante simulando temperatura de cor com indicador de luz e clique digital.</p>
+    </aside>
+  </main>
+
+  <div class="warm-overlay"></div>
+  <div class="cold-overlay"></div>
+
+  <!-- Som de clique -->
+  <audio id="click-sound" src="áudio/Tenz.wav" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
